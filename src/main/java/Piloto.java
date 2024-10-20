@@ -6,7 +6,14 @@ public class Piloto {
 	private String rut;
 	private int edad;
 	private int iD;
-	public ArrayList<Vuelo> pilotos = new ArrayList<Vuelo>();
+
+	public Piloto(String nombre, String apellido, String rut, int edad, int iD) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.rut = rut;
+		this.edad = edad;
+		this.iD = iD;
+	}
 
 	public String getNombre() {
 		return this.nombre;

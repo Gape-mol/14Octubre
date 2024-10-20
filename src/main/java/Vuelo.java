@@ -5,8 +5,31 @@ public class Vuelo {
 	private Ciudad ciudadOrigen;
 	private Fecha fechaOrigen;
 	private Fecha fechaDestino;
-	public ArrayList<Avion> vuelos = new ArrayList<Avion>();
+	private ArrayList<Pasajero> pasajeros;
+	private ArrayList<Piloto> pilotos;
 
+	public Vuelo(Ciudad ciudadDestino, Ciudad ciudadOrigen, Fecha fechaOrigen, Fecha fechaDestino) {
+		this.ciudadDestino = ciudadDestino;
+		this.ciudadOrigen = ciudadOrigen;
+		this.fechaOrigen = fechaOrigen;
+		this.fechaDestino = fechaDestino;
+	}
+
+	public void agregarPasajero(Pasajero pasajero) {
+		if (!pasajeros.contains(pasajero)) {
+			if (pasajero.pasaporteValido()) {
+				pasajeros.add(pasajero);
+			} else {
+				System.out.println("El pasaporte del pasajero no es válido.");
+			}
+		}
+	}
+
+	public void agregarPiloto(Piloto piloto) {
+		if (!pilotos.contains(piloto)) {
+			pilotos.add(piloto);
+		}
+	}
 	public Ciudad getCiudadDestino() {
 		return this.ciudadDestino;
 	}

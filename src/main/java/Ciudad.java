@@ -1,9 +1,11 @@
 public class Ciudad {
 	private String nombre;
-	public Vuelo unnamed_Vuelo_;
-	public Vuelo unnamed_Vuelo_2;
 
-	public void getNombre() {
-		throw new UnsupportedOperationException();
+	public Ciudad(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getNombre() {
+		return nombre;
 	}
 }

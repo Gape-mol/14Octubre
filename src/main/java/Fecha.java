@@ -1,14 +1,15 @@
-public class Fecha {
-	private Time horaVuelo;
-	private Date fechaVuelo;
-	public Vuelo unnamed_Vuelo_;
-	public Vuelo unnamed_Vuelo_2;
+import java.util.Date;
 
-	public Time getHoraVuelo() {
-		return this.horaVuelo;
+public class Fecha {
+	private Date fechaVuelo;
+
+	public Fecha(Date fechaVuelo) {
+		this.fechaVuelo = fechaVuelo;
 	}
+
 
 	public Date getFechaVuelo() {
 		return this.fechaVuelo;
 	}
+
 }
